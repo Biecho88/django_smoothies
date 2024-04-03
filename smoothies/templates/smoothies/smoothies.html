@@ -26,11 +26,11 @@
                                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                     <div class="card h-100 border-0">
                                         {% if Smoothie.image %}
-                                            <a href="">
+                                            <a href="{% url 'smoothie_detail' Smoothie.category %}">
                                                 <img class="card-img-top img-fluid" src="{{ Smoothie.image.url }}" alt="{{ Smoothie.name }}">
                                             </a>
                                         {% else %}
-                                            <a href="">
+                                            <a href="{% url 'smoothie_detail' Smoothie.category %}">
                                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ Smoothie.name }}">
                                             </a>
                                         {% endif %}
